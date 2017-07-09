@@ -1,0 +1,232 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>我的桌面</title>
+</head>
+<body>
+<article class="page-container" id="login">
+	<form class="form form-horizontal" id="form-admin-add" novalidate="novalidate" style="width: 560px;margin: 0 auto;margin-top: 150px;">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>连接名：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="linkName" name="linkName">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>主机名或IP地址：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" placeholder="" id="address" name="address">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>端口：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="number" class="input-text" placeholder="" id="port" name="port" value="3306">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="adminName" name="adminName">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="password" name="password">
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius r" onclick="testLink()" type="button" value="&nbsp;&nbsp;测试&nbsp;&nbsp;">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;连接&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+<div class="page-container" id="pageContent" style="display: none;">
+	<p class="f-20 text-success">欢迎使用H-ui.admin <span class="f-14">v3.0</span>后台模版！</p>
+	<p>登录次数：18 </p>
+	<p>上次登录IP：222.35.131.79.1  上次登录时间：2014-6-14 11:19:55</p>
+	<table class="table table-border table-bordered table-bg">
+		<thead>
+			<tr>
+				<th colspan="7" scope="col">信息统计</th>
+			</tr>
+			<tr class="text-c">
+				<th>统计</th>
+				<th>资讯库</th>
+				<th>图片库</th>
+				<th>产品库</th>
+				<th>用户</th>
+				<th>管理员</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="text-c">
+				<td>总数</td>
+				<td>92</td>
+				<td>9</td>
+				<td>0</td>
+				<td>8</td>
+				<td>20</td>
+			</tr>
+			<tr class="text-c">
+				<td>今日</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr class="text-c">
+				<td>昨日</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr class="text-c">
+				<td>本周</td>
+				<td>2</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr class="text-c">
+				<td>本月</td>
+				<td>2</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+
+<!--此乃百度统计代码，请自行删除-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--/此乃百度统计代码，请自行删除-->
+
+<script>
+$(function(){
+
+});
+$("#form-admin-add").validate({
+    rules:{
+//            linkName:{
+//                required:true
+//            },
+//            address:{
+//                required:true
+//            },
+//            adminName:{
+//                required:true
+//            },
+//            password:{
+//                required:true
+//            }
+    },
+    onkeyup:false,
+    focusCleanup:true,
+    success:"valid",
+    submitHandler:function(form){
+        console.log(123)
+        //linkToDb(form)
+    }
+});
+
+function linkToDb(form) {
+    var postJson = {
+        ip : $("input[name='address']").val(),
+        port : $("input[name='port']").val(),
+        username : $("input[name='adminName']").val(),
+        password : $("input[name='password']").val()
+    };
+    $.ajax({
+        type: "post",
+        url: "/javaStudy/login",
+        data: postJson,
+        success: function(data){
+            var table = data.split('\r\n');
+            var LinkName = "连接1";
+            table.forEach(function (item) {
+                if(item.length == 0){
+                    var index = table.indexOf(item);
+                    table.splice(index, 1);
+                }
+            });
+            layer.msg('添加成功!',{icon:1,time:1000},function () {
+//                    var frame = $("body .menu_dropdown",parent.document);
+//                    var dl = document.createElement("dl");
+//                    var dt = document.createElement("dt");
+//                    var html = ' <dl><dt><i class="Hui-iconfont">&#xe616;</i>'+LinkName+'<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt><dd><ul>';
+//                    table.forEach(function (item) {
+//                        html +=  '<li><a data-href="article-list.html" data-title="'+LinkName+":"+item+'" href="javascript:void(0)">'+item+'</a></li>';
+//                    });
+//                    html += '</ul></dd></dl>';
+//                    $(frame).append(html);
+            });
+
+        }
+    });
+
+
+//        $(form).ajaxSubmit({
+//            type: 'post',
+//            url: "xxxxxxx" ,
+//            success: function(data){
+//                layer.msg('添加成功!',{icon:1,time:1000});
+//            },
+//            error: function(XmlHttpRequest, textStatus, errorThrown){
+//                layer.msg('error!',{icon:1,time:1000});
+//            }
+//        });
+//        var index = parent.layer.getFrameIndex(window.name);
+//        parent.$('.btn-refresh').click();
+//        parent.layer.close(index);
+}
+
+
+
+
+
+</script>
+</body>
+</html>
